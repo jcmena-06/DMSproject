@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://pckAnalysisAndDesignPhase" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://pckAnalysisAndDesignPhase" xmlns:intf="http://pckAnalysisAndDesignPhase" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://pckAnalysisAndDesignPhase" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="measurementsDesign">
+    <complexType/>
+   </element>
+   <element name="measurementsDesignResponse">
+    <complexType/>
+   </element>
+   <element name="measuringRelAssociation">
+    <complexType>
+     <sequence>
+      <element name="sFileName6" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringRelAssociationResponse">
+    <complexType>
+     <sequence>
+      <element name="measuringRelAssociationReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringUseCase">
+    <complexType>
+     <sequence>
+      <element name="sFileName2" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringUseCaseResponse">
+    <complexType>
+     <sequence>
+      <element name="measuringUseCaseReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringActor">
+    <complexType>
+     <sequence>
+      <element name="sFileName" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringActorResponse">
+    <complexType>
+     <sequence>
+      <element name="measuringActorReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringIncludes">
+    <complexType>
+     <sequence>
+      <element name="sFileName4" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringIncludesResponse">
+    <complexType>
+     <sequence>
+      <element name="measuringIncludesReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringAssociation">
+    <complexType>
+     <sequence>
+      <element name="sFileName3" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringAssociationResponse">
+    <complexType>
+     <sequence>
+      <element name="measuringAssociationReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringExtends">
+    <complexType>
+     <sequence>
+      <element name="sFileName5" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringExtendsResponse">
+    <complexType>
+     <sequence>
+      <element name="measuringExtendsReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="measuringUseCaseResponse">
+
+      <wsdl:part element="impl:measuringUseCaseResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringActorRequest">
+
+      <wsdl:part element="impl:measuringActor" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringIncludesResponse">
+
+      <wsdl:part element="impl:measuringIncludesResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringRelAssociationRequest">
+
+      <wsdl:part element="impl:measuringRelAssociation" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringRelAssociationResponse">
+
+      <wsdl:part element="impl:measuringRelAssociationResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringExtendsRequest">
+
+      <wsdl:part element="impl:measuringExtends" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringExtendsResponse">
+
+      <wsdl:part element="impl:measuringExtendsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measurementsDesignRequest">
+
+      <wsdl:part element="impl:measurementsDesign" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringAssociationResponse">
+
+      <wsdl:part element="impl:measuringAssociationResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measurementsDesignResponse">
+
+      <wsdl:part element="impl:measurementsDesignResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringAssociationRequest">
+
+      <wsdl:part element="impl:measuringAssociation" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringUseCaseRequest">
+
+      <wsdl:part element="impl:measuringUseCase" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringActorResponse">
+
+      <wsdl:part element="impl:measuringActorResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringIncludesRequest">
+
+      <wsdl:part element="impl:measuringIncludes" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="UseCase">
+
+      <wsdl:operation name="measurementsDesign">
+
+         <wsdl:input message="impl:measurementsDesignRequest" name="measurementsDesignRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measurementsDesignResponse" name="measurementsDesignResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringRelAssociation">
+
+         <wsdl:input message="impl:measuringRelAssociationRequest" name="measuringRelAssociationRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringRelAssociationResponse" name="measuringRelAssociationResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringUseCase">
+
+         <wsdl:input message="impl:measuringUseCaseRequest" name="measuringUseCaseRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringUseCaseResponse" name="measuringUseCaseResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringActor">
+
+         <wsdl:input message="impl:measuringActorRequest" name="measuringActorRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringActorResponse" name="measuringActorResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringIncludes">
+
+         <wsdl:input message="impl:measuringIncludesRequest" name="measuringIncludesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringIncludesResponse" name="measuringIncludesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringAssociation">
+
+         <wsdl:input message="impl:measuringAssociationRequest" name="measuringAssociationRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringAssociationResponse" name="measuringAssociationResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringExtends">
+
+         <wsdl:input message="impl:measuringExtendsRequest" name="measuringExtendsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringExtendsResponse" name="measuringExtendsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="UseCaseSoapBinding" type="impl:UseCase">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="measurementsDesign">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measurementsDesignRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measurementsDesignResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringRelAssociation">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringRelAssociationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringRelAssociationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringUseCase">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringUseCaseRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringUseCaseResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringActor">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringActorRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringActorResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringIncludes">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringIncludesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringIncludesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringAssociation">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringAssociationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringAssociationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringExtends">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringExtendsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringExtendsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="UseCaseService">
+
+      <wsdl:port binding="impl:UseCaseSoapBinding" name="UseCase">
+
+         <wsdlsoap:address location="http://localhost:8080/DMSver6WSDL/services/UseCase"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

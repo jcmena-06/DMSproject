@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from RequirementsService WSDL service -->
+
+  <service name="Requirements" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://pckRequirementsPhase"/>
+      <parameter name="wsdlServiceElement" value="RequirementsService"/>
+      <parameter name="schemaQualified" value="http://pckRequirementsPhase"/>
+      <parameter name="wsdlServicePort" value="Requirements"/>
+      <parameter name="className" value="pckRequirementsPhase.Requirements"/>
+      <parameter name="wsdlPortType" value="Requirements"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://pckRequirementsPhase" name="measurementsRequirements" qname="operNS:measurementsRequirements" soapAction="">
+      </operation>
+      <parameter name="allowedMethods" value="measurementsRequirements"/>
+
+  </service>
+</deployment>

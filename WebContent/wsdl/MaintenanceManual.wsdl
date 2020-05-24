@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://pckIntegrationAndTestingPhase" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://pckIntegrationAndTestingPhase" xmlns:intf="http://pckIntegrationAndTestingPhase" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://pckIntegrationAndTestingPhase" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="measuringMaintenanceManual">
+    <complexType/>
+   </element>
+   <element name="measuringMaintenanceManualResponse">
+    <complexType/>
+   </element>
+   <element name="measuringStrings">
+    <complexType/>
+   </element>
+   <element name="measuringStringsResponse">
+    <complexType/>
+   </element>
+   <element name="measuringMaintenance">
+    <complexType>
+     <sequence>
+      <element name="sArchivo" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringMaintenanceResponse">
+    <complexType>
+     <sequence>
+      <element name="measuringMaintenanceReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="measuringStringsResponse">
+
+      <wsdl:part element="impl:measuringStringsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringStringsRequest">
+
+      <wsdl:part element="impl:measuringStrings" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringMaintenanceManualRequest">
+
+      <wsdl:part element="impl:measuringMaintenanceManual" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringMaintenanceManualResponse">
+
+      <wsdl:part element="impl:measuringMaintenanceManualResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringMaintenanceRequest">
+
+      <wsdl:part element="impl:measuringMaintenance" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringMaintenanceResponse">
+
+      <wsdl:part element="impl:measuringMaintenanceResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="MaintenanceManual">
+
+      <wsdl:operation name="measuringMaintenanceManual">
+
+         <wsdl:input message="impl:measuringMaintenanceManualRequest" name="measuringMaintenanceManualRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringMaintenanceManualResponse" name="measuringMaintenanceManualResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringStrings">
+
+         <wsdl:input message="impl:measuringStringsRequest" name="measuringStringsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringStringsResponse" name="measuringStringsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringMaintenance">
+
+         <wsdl:input message="impl:measuringMaintenanceRequest" name="measuringMaintenanceRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringMaintenanceResponse" name="measuringMaintenanceResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="MaintenanceManualSoapBinding" type="impl:MaintenanceManual">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="measuringMaintenanceManual">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringMaintenanceManualRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringMaintenanceManualResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringStrings">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringStringsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringStringsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringMaintenance">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringMaintenanceRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringMaintenanceResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="MaintenanceManualService">
+
+      <wsdl:port binding="impl:MaintenanceManualSoapBinding" name="MaintenanceManual">
+
+         <wsdlsoap:address location="http://localhost:8080/DMSver6WSDL/services/MaintenanceManual"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

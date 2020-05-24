@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from TestingService WSDL service -->
+
+  <service name="Testing" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://pckIntegrationAndTestingPhase"/>
+      <parameter name="wsdlServiceElement" value="TestingService"/>
+      <parameter name="schemaQualified" value="http://pckIntegrationAndTestingPhase"/>
+      <parameter name="wsdlServicePort" value="Testing"/>
+      <parameter name="className" value="pckIntegrationAndTestingPhase.Testing"/>
+      <parameter name="wsdlPortType" value="Testing"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://pckIntegrationAndTestingPhase" xmlns:retNS="http://pckIntegrationAndTestingPhase" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="metInsertRequirementsCovered" qname="operNS:metInsertRequirementsCovered" returnQName="retNS:metInsertRequirementsCoveredReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://pckIntegrationAndTestingPhase" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:dRequerimientosCubiertos" type="tns:double"/>
+        <parameter xmlns:pns="http://pckIntegrationAndTestingPhase" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:dTotalRequerimientos" type="tns:double"/>
+      </operation>
+      <operation xmlns:operNS="http://pckIntegrationAndTestingPhase" xmlns:retNS="http://pckIntegrationAndTestingPhase" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="metInsertValuesTestPassed" qname="operNS:metInsertValuesTestPassed" returnQName="retNS:metInsertValuesTestPassedReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://pckIntegrationAndTestingPhase" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:dPruebasExitosas" type="tns:double"/>
+        <parameter xmlns:pns="http://pckIntegrationAndTestingPhase" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:dPruebasEjecutadas" type="tns:double"/>
+      </operation>
+      <operation xmlns:operNS="http://pckIntegrationAndTestingPhase" name="measuringTesting" qname="operNS:measuringTesting" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://pckIntegrationAndTestingPhase" xmlns:retNS="http://pckIntegrationAndTestingPhase" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="metInsertTestCovered" qname="operNS:metInsertTestCovered" returnQName="retNS:metInsertTestCoveredReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://pckIntegrationAndTestingPhase" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:dPruebasRealizadas" type="tns:double"/>
+        <parameter xmlns:pns="http://pckIntegrationAndTestingPhase" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:dTotalPruebas" type="tns:double"/>
+      </operation>
+      <operation xmlns:operNS="http://pckIntegrationAndTestingPhase" xmlns:retNS="http://pckIntegrationAndTestingPhase" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="metInsertTestFailed" qname="operNS:metInsertTestFailed" returnQName="retNS:metInsertTestFailedReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://pckIntegrationAndTestingPhase" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:dPruebasFallidas" type="tns:double"/>
+        <parameter xmlns:pns="http://pckIntegrationAndTestingPhase" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:dPruebasEjecutadas" type="tns:double"/>
+      </operation>
+      <operation xmlns:operNS="http://pckIntegrationAndTestingPhase" xmlns:retNS="http://pckIntegrationAndTestingPhase" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="metInsertTestLocked" qname="operNS:metInsertTestLocked" returnQName="retNS:metInsertTestLockedReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://pckIntegrationAndTestingPhase" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:dPruebasBloqueadas" type="tns:double"/>
+        <parameter xmlns:pns="http://pckIntegrationAndTestingPhase" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:dPruebasEjecutadas" type="tns:double"/>
+      </operation>
+      <parameter name="allowedMethods" value="metInsertTestLocked metInsertValuesTestPassed metInsertTestFailed metInsertTestCovered measuringTesting metInsertRequirementsCovered"/>
+
+  </service>
+</deployment>

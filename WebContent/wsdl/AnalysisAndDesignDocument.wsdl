@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://pckAnalysisAndDesignPhase" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://pckAnalysisAndDesignPhase" xmlns:intf="http://pckAnalysisAndDesignPhase" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://pckAnalysisAndDesignPhase" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="measuringDocAnalysis">
+    <complexType/>
+   </element>
+   <element name="measuringDocAnalysisResponse">
+    <complexType/>
+   </element>
+   <element name="measuringStrings">
+    <complexType/>
+   </element>
+   <element name="measuringStringsResponse">
+    <complexType/>
+   </element>
+   <element name="measuringContent">
+    <complexType>
+     <sequence>
+      <element name="sArchivo" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringContentResponse">
+    <complexType>
+     <sequence>
+      <element name="measuringContentReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="measuringDocAnalysisResponse">
+
+      <wsdl:part element="impl:measuringDocAnalysisResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringContentRequest">
+
+      <wsdl:part element="impl:measuringContent" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringStringsRequest">
+
+      <wsdl:part element="impl:measuringStrings" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringDocAnalysisRequest">
+
+      <wsdl:part element="impl:measuringDocAnalysis" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringStringsResponse">
+
+      <wsdl:part element="impl:measuringStringsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringContentResponse">
+
+      <wsdl:part element="impl:measuringContentResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="AnalysisAndDesignDocument">
+
+      <wsdl:operation name="measuringDocAnalysis">
+
+         <wsdl:input message="impl:measuringDocAnalysisRequest" name="measuringDocAnalysisRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringDocAnalysisResponse" name="measuringDocAnalysisResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringStrings">
+
+         <wsdl:input message="impl:measuringStringsRequest" name="measuringStringsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringStringsResponse" name="measuringStringsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringContent">
+
+         <wsdl:input message="impl:measuringContentRequest" name="measuringContentRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringContentResponse" name="measuringContentResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="AnalysisAndDesignDocumentSoapBinding" type="impl:AnalysisAndDesignDocument">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="measuringDocAnalysis">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringDocAnalysisRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringDocAnalysisResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringStrings">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringStringsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringStringsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringContent">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringContentRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringContentResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="AnalysisAndDesignDocumentService">
+
+      <wsdl:port binding="impl:AnalysisAndDesignDocumentSoapBinding" name="AnalysisAndDesignDocument">
+
+         <wsdlsoap:address location="http://localhost:8080/DMSver6WSDL/services/AnalysisAndDesignDocument"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

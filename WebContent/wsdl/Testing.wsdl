@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://pckIntegrationAndTestingPhase" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://pckIntegrationAndTestingPhase" xmlns:intf="http://pckIntegrationAndTestingPhase" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://pckIntegrationAndTestingPhase" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="metInsertRequirementsCovered">
+    <complexType>
+     <sequence>
+      <element name="dRequerimientosCubiertos" type="xsd:double"/>
+      <element name="dTotalRequerimientos" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="metInsertRequirementsCoveredResponse">
+    <complexType>
+     <sequence>
+      <element name="metInsertRequirementsCoveredReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="metInsertValuesTestPassed">
+    <complexType>
+     <sequence>
+      <element name="dPruebasExitosas" type="xsd:double"/>
+      <element name="dPruebasEjecutadas" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="metInsertValuesTestPassedResponse">
+    <complexType>
+     <sequence>
+      <element name="metInsertValuesTestPassedReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringTesting">
+    <complexType/>
+   </element>
+   <element name="measuringTestingResponse">
+    <complexType/>
+   </element>
+   <element name="metInsertTestCovered">
+    <complexType>
+     <sequence>
+      <element name="dPruebasRealizadas" type="xsd:double"/>
+      <element name="dTotalPruebas" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="metInsertTestCoveredResponse">
+    <complexType>
+     <sequence>
+      <element name="metInsertTestCoveredReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="metInsertTestFailed">
+    <complexType>
+     <sequence>
+      <element name="dPruebasFallidas" type="xsd:double"/>
+      <element name="dPruebasEjecutadas" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="metInsertTestFailedResponse">
+    <complexType>
+     <sequence>
+      <element name="metInsertTestFailedReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="metInsertTestLocked">
+    <complexType>
+     <sequence>
+      <element name="dPruebasBloqueadas" type="xsd:double"/>
+      <element name="dPruebasEjecutadas" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="metInsertTestLockedResponse">
+    <complexType>
+     <sequence>
+      <element name="metInsertTestLockedReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="metInsertRequirementsCoveredResponse">
+
+      <wsdl:part element="impl:metInsertRequirementsCoveredResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="metInsertValuesTestPassedRequest">
+
+      <wsdl:part element="impl:metInsertValuesTestPassed" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="metInsertTestFailedRequest">
+
+      <wsdl:part element="impl:metInsertTestFailed" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="metInsertTestLockedRequest">
+
+      <wsdl:part element="impl:metInsertTestLocked" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="metInsertRequirementsCoveredRequest">
+
+      <wsdl:part element="impl:metInsertRequirementsCovered" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringTestingResponse">
+
+      <wsdl:part element="impl:measuringTestingResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="metInsertTestCoveredResponse">
+
+      <wsdl:part element="impl:metInsertTestCoveredResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="metInsertTestFailedResponse">
+
+      <wsdl:part element="impl:metInsertTestFailedResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="metInsertValuesTestPassedResponse">
+
+      <wsdl:part element="impl:metInsertValuesTestPassedResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringTestingRequest">
+
+      <wsdl:part element="impl:measuringTesting" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="metInsertTestCoveredRequest">
+
+      <wsdl:part element="impl:metInsertTestCovered" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="metInsertTestLockedResponse">
+
+      <wsdl:part element="impl:metInsertTestLockedResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Testing">
+
+      <wsdl:operation name="metInsertRequirementsCovered">
+
+         <wsdl:input message="impl:metInsertRequirementsCoveredRequest" name="metInsertRequirementsCoveredRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:metInsertRequirementsCoveredResponse" name="metInsertRequirementsCoveredResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="metInsertValuesTestPassed">
+
+         <wsdl:input message="impl:metInsertValuesTestPassedRequest" name="metInsertValuesTestPassedRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:metInsertValuesTestPassedResponse" name="metInsertValuesTestPassedResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringTesting">
+
+         <wsdl:input message="impl:measuringTestingRequest" name="measuringTestingRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringTestingResponse" name="measuringTestingResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="metInsertTestCovered">
+
+         <wsdl:input message="impl:metInsertTestCoveredRequest" name="metInsertTestCoveredRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:metInsertTestCoveredResponse" name="metInsertTestCoveredResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="metInsertTestFailed">
+
+         <wsdl:input message="impl:metInsertTestFailedRequest" name="metInsertTestFailedRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:metInsertTestFailedResponse" name="metInsertTestFailedResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="metInsertTestLocked">
+
+         <wsdl:input message="impl:metInsertTestLockedRequest" name="metInsertTestLockedRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:metInsertTestLockedResponse" name="metInsertTestLockedResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="TestingSoapBinding" type="impl:Testing">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="metInsertRequirementsCovered">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="metInsertRequirementsCoveredRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="metInsertRequirementsCoveredResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="metInsertValuesTestPassed">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="metInsertValuesTestPassedRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="metInsertValuesTestPassedResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringTesting">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringTestingRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringTestingResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="metInsertTestCovered">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="metInsertTestCoveredRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="metInsertTestCoveredResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="metInsertTestFailed">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="metInsertTestFailedRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="metInsertTestFailedResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="metInsertTestLocked">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="metInsertTestLockedRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="metInsertTestLockedResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="TestingService">
+
+      <wsdl:port binding="impl:TestingSoapBinding" name="Testing">
+
+         <wsdlsoap:address location="http://localhost:8080/DMSver6WSDL/services/Testing"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

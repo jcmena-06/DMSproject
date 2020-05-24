@@ -1,0 +1,37 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from MeasuringClassService WSDL service -->
+
+  <service name="MeasuringClass" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://pckConstructionPhase"/>
+      <parameter name="wsdlServiceElement" value="MeasuringClassService"/>
+      <parameter name="schemaQualified" value="http://pckConstructionPhase"/>
+      <parameter name="wsdlServicePort" value="MeasuringClass"/>
+      <parameter name="className" value="pckConstructionPhase.MeasuringClassSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="MeasuringClass"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="measuringConstructionProduct" qname="operNS:measuringConstructionProduct" xmlns:operNS="http://pckConstructionPhase" soapAction="" >
+      </operation>
+      <operation name="metricCountMethods" qname="operNS:metricCountMethods" xmlns:operNS="http://pckConstructionPhase" returnQName="retNS:metricCountMethodsReturn" xmlns:retNS="http://pckConstructionPhase" returnType="rtns:double" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:sPackage" xmlns:pns="http://pckConstructionPhase" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:sClass" xmlns:pns="http://pckConstructionPhase" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="metricCountLines" qname="operNS:metricCountLines" xmlns:operNS="http://pckConstructionPhase" returnQName="retNS:metricCountLinesReturn" xmlns:retNS="http://pckConstructionPhase" returnType="rtns:double" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:sProject" xmlns:pns="http://pckConstructionPhase" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:sPackage" xmlns:pns="http://pckConstructionPhase" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:sClass" xmlns:pns="http://pckConstructionPhase" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="metricCountLines measuringConstructionProduct metricCountMethods"/>
+
+  </service>
+</deployment>

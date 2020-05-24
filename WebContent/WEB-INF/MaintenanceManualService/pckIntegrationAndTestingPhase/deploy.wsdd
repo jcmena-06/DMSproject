@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from MaintenanceManualService WSDL service -->
+
+  <service name="MaintenanceManual" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://pckIntegrationAndTestingPhase"/>
+      <parameter name="wsdlServiceElement" value="MaintenanceManualService"/>
+      <parameter name="schemaQualified" value="http://pckIntegrationAndTestingPhase"/>
+      <parameter name="wsdlServicePort" value="MaintenanceManual"/>
+      <parameter name="className" value="pckIntegrationAndTestingPhase.MaintenanceManual"/>
+      <parameter name="wsdlPortType" value="MaintenanceManual"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://pckIntegrationAndTestingPhase" name="measuringMaintenanceManual" qname="operNS:measuringMaintenanceManual" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://pckIntegrationAndTestingPhase" name="measuringStrings" qname="operNS:measuringStrings" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://pckIntegrationAndTestingPhase" xmlns:retNS="http://pckIntegrationAndTestingPhase" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="measuringMaintenance" qname="operNS:measuringMaintenance" returnQName="retNS:measuringMaintenanceReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://pckIntegrationAndTestingPhase" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:sArchivo" type="tns:string"/>
+      </operation>
+      <parameter name="allowedMethods" value="measuringMaintenance measuringStrings measuringMaintenanceManual"/>
+
+  </service>
+</deployment>

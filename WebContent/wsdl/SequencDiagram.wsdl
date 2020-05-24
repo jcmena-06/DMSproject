@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://pckAnalysisAndDesignPhase" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://pckAnalysisAndDesignPhase" xmlns:intf="http://pckAnalysisAndDesignPhase" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://pckAnalysisAndDesignPhase" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="measurementsDesign">
+    <complexType/>
+   </element>
+   <element name="measurementsDesignResponse">
+    <complexType/>
+   </element>
+   <element name="metNumLifeLine">
+    <complexType>
+     <sequence>
+      <element name="sFileName2" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="metNumLifeLineResponse">
+    <complexType>
+     <sequence>
+      <element name="metNumLifeLineReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="metNumActor">
+    <complexType>
+     <sequence>
+      <element name="sFileName" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="metNumActorResponse">
+    <complexType>
+     <sequence>
+      <element name="metNumActorReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="metNumMessage">
+    <complexType>
+     <sequence>
+      <element name="sFileName3" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="metNumMessageResponse">
+    <complexType>
+     <sequence>
+      <element name="metNumMessageReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="metNumLifeLineResponse">
+
+      <wsdl:part element="impl:metNumLifeLineResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measurementsDesignRequest">
+
+      <wsdl:part element="impl:measurementsDesign" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measurementsDesignResponse">
+
+      <wsdl:part element="impl:measurementsDesignResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="metNumMessageResponse">
+
+      <wsdl:part element="impl:metNumMessageResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="metNumMessageRequest">
+
+      <wsdl:part element="impl:metNumMessage" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="metNumActorRequest">
+
+      <wsdl:part element="impl:metNumActor" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="metNumActorResponse">
+
+      <wsdl:part element="impl:metNumActorResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="metNumLifeLineRequest">
+
+      <wsdl:part element="impl:metNumLifeLine" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="SequencDiagram">
+
+      <wsdl:operation name="measurementsDesign">
+
+         <wsdl:input message="impl:measurementsDesignRequest" name="measurementsDesignRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measurementsDesignResponse" name="measurementsDesignResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="metNumLifeLine">
+
+         <wsdl:input message="impl:metNumLifeLineRequest" name="metNumLifeLineRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:metNumLifeLineResponse" name="metNumLifeLineResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="metNumActor">
+
+         <wsdl:input message="impl:metNumActorRequest" name="metNumActorRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:metNumActorResponse" name="metNumActorResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="metNumMessage">
+
+         <wsdl:input message="impl:metNumMessageRequest" name="metNumMessageRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:metNumMessageResponse" name="metNumMessageResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="SequencDiagramSoapBinding" type="impl:SequencDiagram">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="measurementsDesign">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measurementsDesignRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measurementsDesignResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="metNumLifeLine">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="metNumLifeLineRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="metNumLifeLineResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="metNumActor">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="metNumActorRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="metNumActorResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="metNumMessage">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="metNumMessageRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="metNumMessageResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="SequencDiagramService">
+
+      <wsdl:port binding="impl:SequencDiagramSoapBinding" name="SequencDiagram">
+
+         <wsdlsoap:address location="http://localhost:8080/DMSver6WSDL/services/SequencDiagram"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

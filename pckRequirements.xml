@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UMLProfile>
+	<Documentation id="77129BA8-2" name="pckRequirementsPhase" version="1.0" notes="pckRequirementsPhase"/>
+	<!-- The profile content -->
+	<Content>
+		<!-- List of stereotypes used in this profile-->
+		<Stereotypes>
+			<Stereotype name="DocumentSRS" notes="" cx="" cy="" metafile="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo/>
+				<TaggedValues/>
+				<Constraints/>
+			</Stereotype>
+			<Stereotype name="MeasurementsManagement" notes="" cx="" cy="" metafile="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo/>
+				<TaggedValues/>
+				<Constraints/>
+			</Stereotype>
+			<Stereotype name="Product" notes="" cx="" cy="" metafile="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo/>
+				<TaggedValues/>
+				<Constraints/>
+			</Stereotype>
+			<Stereotype name="ProductRequirements" notes="" cx="" cy="" metafile="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo/>
+				<TaggedValues/>
+				<Constraints/>
+			</Stereotype>
+			<Stereotype name="Requirements" notes="" cx="" cy="" metafile="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo/>
+				<TaggedValues/>
+				<Constraints/>
+			</Stereotype>
+			<Stereotype name="RequirementsPhase" notes="" cx="" cy="" metafile="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo/>
+				<TaggedValues>
+					<Tag name="oProduct" description="" values="" default=""/>
+				</TaggedValues>
+				<Constraints/>
+			</Stereotype>
+			<Stereotype name="TestPlan" notes="" cx="" cy="" metafile="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo/>
+				<TaggedValues/>
+				<Constraints/>
+			</Stereotype>
+			<Stereotype name="UserManual" notes="" cx="" cy="" metafile="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo/>
+				<TaggedValues/>
+				<Constraints/>
+			</Stereotype>
+		</Stereotypes>
+		<TaggedValueTypes/>
+	</Content>
+</UMLProfile>

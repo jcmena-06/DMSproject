@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from TestPlanService WSDL service -->
+
+  <service name="TestPlan" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://pckRequirementsPhase"/>
+      <parameter name="wsdlServiceElement" value="TestPlanService"/>
+      <parameter name="schemaQualified" value="http://pckRequirementsPhase"/>
+      <parameter name="wsdlServicePort" value="TestPlan"/>
+      <parameter name="className" value="pckRequirementsPhase.TestPlan"/>
+      <parameter name="wsdlPortType" value="TestPlan"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://pckRequirementsPhase" name="measurements" qname="operNS:measurements" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://pckRequirementsPhase" xmlns:retNS="http://pckRequirementsPhase" xmlns:rtns="http://pckRequirementsPhase" xmlns:tns="http://pckRequirementsPhase" name="measuringStrings" qname="operNS:measuringStrings" returnQName="retNS:measuringStringsReturn" returnType="rtns:ArrayOf_xsd_anyType" returnItemQName="tns:item" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://pckRequirementsPhase" name="measuringContent" qname="operNS:measuringContent" soapAction="">
+        <parameter xmlns:pns="http://pckRequirementsPhase" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:sArchivo" type="tns:string"/>
+      </operation>
+      <parameter name="allowedMethods" value="measuringContent measuringStrings measurements"/>
+
+      <typeMapping xmlns:ns="http://pckRequirementsPhase" qname="ns:&gt;measuringContentResponse" type="java:pckRequirementsPhase.MeasuringContentResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://pckRequirementsPhase" qname="ns:&gt;measuringStringsResponse" type="java:pckRequirementsPhase.MeasuringStringsResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://pckRequirementsPhase" qname="ns:&gt;measurements" type="java:pckRequirementsPhase.Measurements" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://pckRequirementsPhase" qname="ns:&gt;measuringContent" type="java:pckRequirementsPhase.MeasuringContent" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://pckRequirementsPhase" qname="ns:&gt;measurementsResponse" type="java:pckRequirementsPhase.MeasurementsResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <arrayMapping xmlns:ns="http://pckRequirementsPhase" xmlns:cmp-ns="http://www.w3.org/2001/XMLSchema" qname="ns:ArrayOf_xsd_anyType" type="java:java.lang.Object[]" innerType="cmp-ns:anyType" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://pckRequirementsPhase" qname="ns:&gt;measuringStrings" type="java:pckRequirementsPhase.MeasuringStrings" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+  </service>
+</deployment>

@@ -1,0 +1,28 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from DesignDocumentProductService WSDL service -->
+
+  <service name="DesignDocumentProduct" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://pckAnalysisAndDesignPhase"/>
+      <parameter name="wsdlServiceElement" value="DesignDocumentProductService"/>
+      <parameter name="schemaQualified" value="http://pckAnalysisAndDesignPhase"/>
+      <parameter name="wsdlServicePort" value="DesignDocumentProduct"/>
+      <parameter name="className" value="pckAnalysisAndDesignPhase.DesignDocumentProductSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="DesignDocumentProduct"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="measuringDocAnalysis" qname="operNS:measuringDocAnalysis" xmlns:operNS="http://pckAnalysisAndDesignPhase" soapAction="" >
+      </operation>
+      <parameter name="allowedMethods" value="measuringDocAnalysis"/>
+
+  </service>
+</deployment>

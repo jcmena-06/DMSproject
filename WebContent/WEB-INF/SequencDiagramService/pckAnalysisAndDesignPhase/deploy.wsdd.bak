@@ -1,0 +1,37 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from SequencDiagramService WSDL service -->
+
+  <service name="SequencDiagram" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://pckAnalysisAndDesignPhase"/>
+      <parameter name="wsdlServiceElement" value="SequencDiagramService"/>
+      <parameter name="schemaQualified" value="http://pckAnalysisAndDesignPhase"/>
+      <parameter name="wsdlServicePort" value="SequencDiagram"/>
+      <parameter name="className" value="pckAnalysisAndDesignPhase.SequencDiagramSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="SequencDiagram"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="measurementsDesign" qname="operNS:measurementsDesign" xmlns:operNS="http://pckAnalysisAndDesignPhase" soapAction="" >
+      </operation>
+      <operation name="metNumLifeLine" qname="operNS:metNumLifeLine" xmlns:operNS="http://pckAnalysisAndDesignPhase" returnQName="retNS:metNumLifeLineReturn" xmlns:retNS="http://pckAnalysisAndDesignPhase" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:sFileName2" xmlns:pns="http://pckAnalysisAndDesignPhase" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="metNumActor" qname="operNS:metNumActor" xmlns:operNS="http://pckAnalysisAndDesignPhase" returnQName="retNS:metNumActorReturn" xmlns:retNS="http://pckAnalysisAndDesignPhase" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:sFileName" xmlns:pns="http://pckAnalysisAndDesignPhase" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="metNumMessage" qname="operNS:metNumMessage" xmlns:operNS="http://pckAnalysisAndDesignPhase" returnQName="retNS:metNumMessageReturn" xmlns:retNS="http://pckAnalysisAndDesignPhase" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:sFileName3" xmlns:pns="http://pckAnalysisAndDesignPhase" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="metNumLifeLine metNumMessage metNumActor measurementsDesign"/>
+
+  </service>
+</deployment>

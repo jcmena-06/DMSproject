@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://pckConstructionPhase" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://pckConstructionPhase" xmlns:intf="http://pckConstructionPhase" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://pckConstructionPhase" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="measuringConstructionProduct">
+    <complexType/>
+   </element>
+   <element name="measuringConstructionProductResponse">
+    <complexType/>
+   </element>
+   <element name="metricCountMethods">
+    <complexType>
+     <sequence>
+      <element name="sPackage" type="xsd:string"/>
+      <element name="sClass" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="metricCountMethodsResponse">
+    <complexType>
+     <sequence>
+      <element name="metricCountMethodsReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="metricCountLines">
+    <complexType>
+     <sequence>
+      <element name="sProject" type="xsd:string"/>
+      <element name="sPackage" type="xsd:string"/>
+      <element name="sClass" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="metricCountLinesResponse">
+    <complexType>
+     <sequence>
+      <element name="metricCountLinesReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="metricCountLinesRequest">
+
+      <wsdl:part element="impl:metricCountLines" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="metricCountMethodsRequest">
+
+      <wsdl:part element="impl:metricCountMethods" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="metricCountMethodsResponse">
+
+      <wsdl:part element="impl:metricCountMethodsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringConstructionProductRequest">
+
+      <wsdl:part element="impl:measuringConstructionProduct" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringConstructionProductResponse">
+
+      <wsdl:part element="impl:measuringConstructionProductResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="metricCountLinesResponse">
+
+      <wsdl:part element="impl:metricCountLinesResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="MeasuringClass">
+
+      <wsdl:operation name="measuringConstructionProduct">
+
+         <wsdl:input message="impl:measuringConstructionProductRequest" name="measuringConstructionProductRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringConstructionProductResponse" name="measuringConstructionProductResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="metricCountMethods">
+
+         <wsdl:input message="impl:metricCountMethodsRequest" name="metricCountMethodsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:metricCountMethodsResponse" name="metricCountMethodsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="metricCountLines">
+
+         <wsdl:input message="impl:metricCountLinesRequest" name="metricCountLinesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:metricCountLinesResponse" name="metricCountLinesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="MeasuringClassSoapBinding" type="impl:MeasuringClass">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="measuringConstructionProduct">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringConstructionProductRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringConstructionProductResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="metricCountMethods">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="metricCountMethodsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="metricCountMethodsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="metricCountLines">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="metricCountLinesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="metricCountLinesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="MeasuringClassService">
+
+      <wsdl:port binding="impl:MeasuringClassSoapBinding" name="MeasuringClass">
+
+         <wsdlsoap:address location="http://localhost:8080/DMSver6WSDL/services/MeasuringClass"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

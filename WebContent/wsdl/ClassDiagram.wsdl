@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://pckAnalysisAndDesignPhase" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://pckAnalysisAndDesignPhase" xmlns:intf="http://pckAnalysisAndDesignPhase" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://pckAnalysisAndDesignPhase" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="measuringRelGeneralization">
+    <complexType>
+     <sequence>
+      <element name="sNameFile5" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringRelGeneralizationResponse">
+    <complexType>
+     <sequence>
+      <element name="measuringRelGeneralizationReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measurementsDesign">
+    <complexType/>
+   </element>
+   <element name="measurementsDesignResponse">
+    <complexType/>
+   </element>
+   <element name="measuringRelComposition">
+    <complexType>
+     <sequence>
+      <element name="sNameFile6" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringRelCompositionResponse">
+    <complexType>
+     <sequence>
+      <element name="measuringRelCompositionReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringRelAssociation">
+    <complexType>
+     <sequence>
+      <element name="sNameFile4" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringRelAssociationResponse">
+    <complexType>
+     <sequence>
+      <element name="measuringRelAssociationReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringTotalPackage">
+    <complexType>
+     <sequence>
+      <element name="sNameFile7" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringTotalPackageResponse">
+    <complexType>
+     <sequence>
+      <element name="measuringTotalPackageReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringTotalClasses">
+    <complexType>
+     <sequence>
+      <element name="sNameFile8" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringTotalClassesResponse">
+    <complexType>
+     <sequence>
+      <element name="measuringTotalClassesReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringRelAggregation">
+    <complexType>
+     <sequence>
+      <element name="sNameFile2" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringRelAggregationResponse">
+    <complexType>
+     <sequence>
+      <element name="measuringRelAggregationReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringAbstractClass">
+    <complexType>
+     <sequence>
+      <element name="sFileName9" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringAbstractClassResponse">
+    <complexType>
+     <sequence>
+      <element name="measuringAbstractClassReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringAttributes">
+    <complexType>
+     <sequence>
+      <element name="sFileName10" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringAttributesResponse">
+    <complexType>
+     <sequence>
+      <element name="measuringAttributesReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measurinRelDependency">
+    <complexType>
+     <sequence>
+      <element name="sNameFile3" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measurinRelDependencyResponse">
+    <complexType>
+     <sequence>
+      <element name="measurinRelDependencyReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringClass">
+    <complexType>
+     <sequence>
+      <element name="sNameFile" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringClassResponse">
+    <complexType>
+     <sequence>
+      <element name="measuringClassReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringMethods">
+    <complexType>
+     <sequence>
+      <element name="sFileName11" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringMethodsResponse">
+    <complexType>
+     <sequence>
+      <element name="measuringMethodsReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="measurinRelDependencyRequest">
+
+      <wsdl:part element="impl:measurinRelDependency" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringTotalPackageResponse">
+
+      <wsdl:part element="impl:measuringTotalPackageResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringTotalPackageRequest">
+
+      <wsdl:part element="impl:measuringTotalPackage" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringClassResponse">
+
+      <wsdl:part element="impl:measuringClassResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringRelCompositionRequest">
+
+      <wsdl:part element="impl:measuringRelComposition" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringAttributesRequest">
+
+      <wsdl:part element="impl:measuringAttributes" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringAbstractClassRequest">
+
+      <wsdl:part element="impl:measuringAbstractClass" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringRelAssociationRequest">
+
+      <wsdl:part element="impl:measuringRelAssociation" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringAttributesResponse">
+
+      <wsdl:part element="impl:measuringAttributesResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringMethodsRequest">
+
+      <wsdl:part element="impl:measuringMethods" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringRelAssociationResponse">
+
+      <wsdl:part element="impl:measuringRelAssociationResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringRelGeneralizationRequest">
+
+      <wsdl:part element="impl:measuringRelGeneralization" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringRelAggregationRequest">
+
+      <wsdl:part element="impl:measuringRelAggregation" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringTotalClassesRequest">
+
+      <wsdl:part element="impl:measuringTotalClasses" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measurinRelDependencyResponse">
+
+      <wsdl:part element="impl:measurinRelDependencyResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringClassRequest">
+
+      <wsdl:part element="impl:measuringClass" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measurementsDesignRequest">
+
+      <wsdl:part element="impl:measurementsDesign" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringRelAggregationResponse">
+
+      <wsdl:part element="impl:measuringRelAggregationResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringMethodsResponse">
+
+      <wsdl:part element="impl:measuringMethodsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measurementsDesignResponse">
+
+      <wsdl:part element="impl:measurementsDesignResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringRelCompositionResponse">
+
+      <wsdl:part element="impl:measuringRelCompositionResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringTotalClassesResponse">
+
+      <wsdl:part element="impl:measuringTotalClassesResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringAbstractClassResponse">
+
+      <wsdl:part element="impl:measuringAbstractClassResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringRelGeneralizationResponse">
+
+      <wsdl:part element="impl:measuringRelGeneralizationResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="ClassDiagram">
+
+      <wsdl:operation name="measuringRelGeneralization">
+
+         <wsdl:input message="impl:measuringRelGeneralizationRequest" name="measuringRelGeneralizationRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringRelGeneralizationResponse" name="measuringRelGeneralizationResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measurementsDesign">
+
+         <wsdl:input message="impl:measurementsDesignRequest" name="measurementsDesignRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measurementsDesignResponse" name="measurementsDesignResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringRelComposition">
+
+         <wsdl:input message="impl:measuringRelCompositionRequest" name="measuringRelCompositionRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringRelCompositionResponse" name="measuringRelCompositionResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringRelAssociation">
+
+         <wsdl:input message="impl:measuringRelAssociationRequest" name="measuringRelAssociationRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringRelAssociationResponse" name="measuringRelAssociationResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringTotalPackage">
+
+         <wsdl:input message="impl:measuringTotalPackageRequest" name="measuringTotalPackageRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringTotalPackageResponse" name="measuringTotalPackageResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringTotalClasses">
+
+         <wsdl:input message="impl:measuringTotalClassesRequest" name="measuringTotalClassesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringTotalClassesResponse" name="measuringTotalClassesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringRelAggregation">
+
+         <wsdl:input message="impl:measuringRelAggregationRequest" name="measuringRelAggregationRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringRelAggregationResponse" name="measuringRelAggregationResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringAbstractClass">
+
+         <wsdl:input message="impl:measuringAbstractClassRequest" name="measuringAbstractClassRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringAbstractClassResponse" name="measuringAbstractClassResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringAttributes">
+
+         <wsdl:input message="impl:measuringAttributesRequest" name="measuringAttributesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringAttributesResponse" name="measuringAttributesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measurinRelDependency">
+
+         <wsdl:input message="impl:measurinRelDependencyRequest" name="measurinRelDependencyRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measurinRelDependencyResponse" name="measurinRelDependencyResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringClass">
+
+         <wsdl:input message="impl:measuringClassRequest" name="measuringClassRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringClassResponse" name="measuringClassResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringMethods">
+
+         <wsdl:input message="impl:measuringMethodsRequest" name="measuringMethodsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringMethodsResponse" name="measuringMethodsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="ClassDiagramSoapBinding" type="impl:ClassDiagram">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="measuringRelGeneralization">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringRelGeneralizationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringRelGeneralizationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measurementsDesign">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measurementsDesignRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measurementsDesignResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringRelComposition">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringRelCompositionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringRelCompositionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringRelAssociation">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringRelAssociationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringRelAssociationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringTotalPackage">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringTotalPackageRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringTotalPackageResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringTotalClasses">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringTotalClassesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringTotalClassesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringRelAggregation">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringRelAggregationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringRelAggregationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringAbstractClass">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringAbstractClassRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringAbstractClassResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringAttributes">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringAttributesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringAttributesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measurinRelDependency">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measurinRelDependencyRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measurinRelDependencyResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringClass">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringClassRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringClassResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringMethods">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringMethodsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringMethodsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="ClassDiagramService">
+
+      <wsdl:port binding="impl:ClassDiagramSoapBinding" name="ClassDiagram">
+
+         <wsdlsoap:address location="http://localhost:8080/DMSver6WSDL/services/ClassDiagram"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

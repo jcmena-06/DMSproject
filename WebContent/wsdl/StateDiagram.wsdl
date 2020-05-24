@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://pckAnalysisAndDesignPhase" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://pckAnalysisAndDesignPhase" xmlns:intf="http://pckAnalysisAndDesignPhase" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://pckAnalysisAndDesignPhase" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="measurementsDesign">
+    <complexType/>
+   </element>
+   <element name="measurementsDesignResponse">
+    <complexType/>
+   </element>
+   <element name="measuringStates">
+    <complexType>
+     <sequence>
+      <element name="sFileName" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringStatesResponse">
+    <complexType>
+     <sequence>
+      <element name="measuringStatesReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringInitial">
+    <complexType>
+     <sequence>
+      <element name="sFileName6" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringInitialResponse">
+    <complexType>
+     <sequence>
+      <element name="measuringInitialReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringChoice">
+    <complexType>
+     <sequence>
+      <element name="sFilename5" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringChoiceResponse">
+    <complexType>
+     <sequence>
+      <element name="measuringChoiceReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringTotalState">
+    <complexType>
+     <sequence>
+      <element name="sFileName2" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringTotalStateResponse">
+    <complexType>
+     <sequence>
+      <element name="measuringTotalStateReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringTotalTransition">
+    <complexType>
+     <sequence>
+      <element name="sFilename3" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringTotalTransitionResponse">
+    <complexType>
+     <sequence>
+      <element name="measuringTotalTransitionReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringFinal">
+    <complexType>
+     <sequence>
+      <element name="sFileName7" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringFinalResponse">
+    <complexType>
+     <sequence>
+      <element name="measuringFinalReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringTotalJoins">
+    <complexType>
+     <sequence>
+      <element name="sFileName4" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="measuringTotalJoinsResponse">
+    <complexType>
+     <sequence>
+      <element name="measuringTotalJoinsReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="measuringTotalJoinsRequest">
+
+      <wsdl:part element="impl:measuringTotalJoins" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringTotalStateRequest">
+
+      <wsdl:part element="impl:measuringTotalState" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringChoiceResponse">
+
+      <wsdl:part element="impl:measuringChoiceResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringTotalTransitionRequest">
+
+      <wsdl:part element="impl:measuringTotalTransition" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringInitialResponse">
+
+      <wsdl:part element="impl:measuringInitialResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringTotalTransitionResponse">
+
+      <wsdl:part element="impl:measuringTotalTransitionResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringFinalResponse">
+
+      <wsdl:part element="impl:measuringFinalResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringStatesRequest">
+
+      <wsdl:part element="impl:measuringStates" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measurementsDesignRequest">
+
+      <wsdl:part element="impl:measurementsDesign" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringChoiceRequest">
+
+      <wsdl:part element="impl:measuringChoice" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measurementsDesignResponse">
+
+      <wsdl:part element="impl:measurementsDesignResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringTotalJoinsResponse">
+
+      <wsdl:part element="impl:measuringTotalJoinsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringTotalStateResponse">
+
+      <wsdl:part element="impl:measuringTotalStateResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringStatesResponse">
+
+      <wsdl:part element="impl:measuringStatesResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringFinalRequest">
+
+      <wsdl:part element="impl:measuringFinal" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="measuringInitialRequest">
+
+      <wsdl:part element="impl:measuringInitial" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="StateDiagram">
+
+      <wsdl:operation name="measurementsDesign">
+
+         <wsdl:input message="impl:measurementsDesignRequest" name="measurementsDesignRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measurementsDesignResponse" name="measurementsDesignResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringStates">
+
+         <wsdl:input message="impl:measuringStatesRequest" name="measuringStatesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringStatesResponse" name="measuringStatesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringInitial">
+
+         <wsdl:input message="impl:measuringInitialRequest" name="measuringInitialRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringInitialResponse" name="measuringInitialResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringChoice">
+
+         <wsdl:input message="impl:measuringChoiceRequest" name="measuringChoiceRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringChoiceResponse" name="measuringChoiceResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringTotalState">
+
+         <wsdl:input message="impl:measuringTotalStateRequest" name="measuringTotalStateRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringTotalStateResponse" name="measuringTotalStateResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringTotalTransition">
+
+         <wsdl:input message="impl:measuringTotalTransitionRequest" name="measuringTotalTransitionRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringTotalTransitionResponse" name="measuringTotalTransitionResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringFinal">
+
+         <wsdl:input message="impl:measuringFinalRequest" name="measuringFinalRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringFinalResponse" name="measuringFinalResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringTotalJoins">
+
+         <wsdl:input message="impl:measuringTotalJoinsRequest" name="measuringTotalJoinsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:measuringTotalJoinsResponse" name="measuringTotalJoinsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="StateDiagramSoapBinding" type="impl:StateDiagram">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="measurementsDesign">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measurementsDesignRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measurementsDesignResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringStates">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringStatesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringStatesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringInitial">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringInitialRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringInitialResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringChoice">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringChoiceRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringChoiceResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringTotalState">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringTotalStateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringTotalStateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringTotalTransition">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringTotalTransitionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringTotalTransitionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringFinal">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringFinalRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringFinalResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="measuringTotalJoins">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="measuringTotalJoinsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="measuringTotalJoinsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="StateDiagramService">
+
+      <wsdl:port binding="impl:StateDiagramSoapBinding" name="StateDiagram">
+
+         <wsdlsoap:address location="http://localhost:8080/DMSver6WSDL/services/StateDiagram"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

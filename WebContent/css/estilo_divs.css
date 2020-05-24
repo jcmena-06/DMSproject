@@ -1,0 +1,87 @@
+div#contenedor{
+	margin-left: 20px;
+	margin-top: 20px;
+	width: 1300px;
+	height: 600px;
+	border: 5px solid #00695c;
+	background: #004d40;
+}
+
+div#izquierda{
+	margin-left:20px;
+	margin-top: 30px;
+	width: 300px;
+	height: 400px;
+	border: 1px solid #dd2c00;
+	float: left;
+	background: #eceff1;
+}
+
+div#centro{
+	margin-left:20px;
+	margin-top: 30px;
+	width: 300px;
+	height: 400px;
+	border: 1px solid #dd2c00;
+	float: left;
+	background: #eceff1;
+	background-image: img("moprosoft.png");
+}
+
+div#derecha{
+	margin-left:20px;
+	margin-top: 30px;
+	width: 300px;
+	height: 400px;
+	border: 1px solid #dd2c00;
+	float: left;
+	background: #eceff1;
+}
+
+div#final{
+	margin-left:20px;
+	margin-top: 30px;
+	width: 300px;
+	height: 400px;
+	border: 1px solid #dd2c00;
+	float: left;
+	background: #eceff1;
+}
+
+div#inferior{
+	margin-left:20px;
+	margin-top: 20px;
+	width: 1265px;
+	height: 130px;
+	border: 1px solid #dd2c00;
+	background: #eceff1;
+	float: left;
+}
+
+button{
+	margin-top: 10px;
+	height: 50px;
+	width: 230px;
+}
+
+button:active {
+  background-color: #0277bd;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.icono.izquierda{
+	float:left;
+	margin-right: 5px;
+}
+
+table{
+	margin-top:50px;
+	margin-left: 10px;
+	width: 80px;
+}
+
+#tableResult{
+	width: 80px;
+	margin-left: 10px;
+}

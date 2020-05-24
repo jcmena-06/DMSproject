@@ -1,0 +1,323 @@
+<ns1:deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java" xmlns:ns1="http://xml.apache.org/axis/wsdd/">
+ <ns1:globalConfiguration>
+  <ns1:parameter name="sendMultiRefs" value="true"/>
+  <ns1:parameter name="disablePrettyXML" value="true"/>
+  <ns1:parameter name="adminPassword" value="admin"/>
+  <ns1:parameter name="attachments.Directory" value="C:\Users\ph4rr3l\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\DMSver6WSDL\WEB-INF\attachments"/>
+  <ns1:parameter name="dotNetSoapEncFix" value="true"/>
+  <ns1:parameter name="enableNamespacePrefixOptimization" value="false"/>
+  <ns1:parameter name="sendXMLDeclaration" value="true"/>
+  <ns1:parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl"/>
+  <ns1:parameter name="sendXsiTypes" value="true"/>
+  <ns1:requestFlow>
+   <ns1:handler type="java:org.apache.axis.handlers.JWSHandler">
+    <ns1:parameter name="scope" value="session"/>
+   </ns1:handler>
+   <ns1:handler type="java:org.apache.axis.handlers.JWSHandler">
+    <ns1:parameter name="scope" value="request"/>
+    <ns1:parameter name="extension" value=".jwr"/>
+   </ns1:handler>
+  </ns1:requestFlow>
+ </ns1:globalConfiguration>
+ <ns1:handler name="URLMapper" type="java:org.apache.axis.handlers.http.URLMapper"/>
+ <ns1:handler name="Authenticate" type="java:org.apache.axis.handlers.SimpleAuthenticationHandler"/>
+ <ns1:handler name="LocalResponder" type="java:org.apache.axis.transport.local.LocalResponder"/>
+ <ns1:service name="StateDiagram" provider="java:RPC" style="wrapped" use="literal">
+  <ns2:operation name="measurementsDesign" qname="ns1:measurementsDesign" soapAction="" xmlns:ns1="http://pckAnalysisAndDesignPhase" xmlns:ns2="http://xml.apache.org/axis/wsdd/"/>
+  <ns1:operation name="measuringStates" qname="ns2:measuringStates" returnQName="ns2:measuringStatesReturn" returnType="xsd:double" soapAction="" xmlns:ns2="http://pckAnalysisAndDesignPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns2:sFileName" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="measuringInitial" qname="ns3:measuringInitial" returnQName="ns3:measuringInitialReturn" returnType="xsd:double" soapAction="" xmlns:ns3="http://pckAnalysisAndDesignPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns3:sFileName6" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="measuringChoice" qname="ns4:measuringChoice" returnQName="ns4:measuringChoiceReturn" returnType="xsd:double" soapAction="" xmlns:ns4="http://pckAnalysisAndDesignPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns4:sFilename5" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="measuringTotalState" qname="ns5:measuringTotalState" returnQName="ns5:measuringTotalStateReturn" returnType="xsd:double" soapAction="" xmlns:ns5="http://pckAnalysisAndDesignPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns5:sFileName2" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="measuringTotalTransition" qname="ns6:measuringTotalTransition" returnQName="ns6:measuringTotalTransitionReturn" returnType="xsd:double" soapAction="" xmlns:ns6="http://pckAnalysisAndDesignPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns6:sFilename3" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="measuringFinal" qname="ns7:measuringFinal" returnQName="ns7:measuringFinalReturn" returnType="xsd:double" soapAction="" xmlns:ns7="http://pckAnalysisAndDesignPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns7:sFileName7" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="measuringTotalJoins" qname="ns8:measuringTotalJoins" returnQName="ns8:measuringTotalJoinsReturn" returnType="xsd:double" soapAction="" xmlns:ns8="http://pckAnalysisAndDesignPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns8:sFileName4" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="measuringTotalState measuringFinal measuringTotalTransition measuringInitial measuringTotalJoins measurementsDesign measuringChoice measuringStates"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlPortType" value="StateDiagram"/>
+  <ns1:parameter name="className" value="pckAnalysisAndDesignPhase.StateDiagram"/>
+  <ns1:parameter name="wsdlServicePort" value="StateDiagram"/>
+  <ns1:parameter name="schemaQualified" value="http://pckAnalysisAndDesignPhase"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://pckAnalysisAndDesignPhase"/>
+  <ns1:parameter name="wsdlServiceElement" value="StateDiagramService"/>
+ </ns1:service>
+ <ns1:service name="AdminService" provider="java:MSG">
+  <ns1:parameter name="allowedMethods" value="AdminService"/>
+  <ns1:parameter name="enableRemoteAdmin" value="false"/>
+  <ns1:parameter name="className" value="org.apache.axis.utils.Admin"/>
+  <ns1:namespace>http://xml.apache.org/axis/wsdd/</ns1:namespace>
+ </ns1:service>
+ <ns1:service name="DocumentSRS" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="measurements" qname="ns9:measurements" soapAction="" xmlns:ns9="http://pckRequirementsPhase"/>
+  <ns1:operation name="measuringStrings" qname="ns10:measuringStrings" soapAction="" xmlns:ns10="http://pckRequirementsPhase"/>
+  <ns1:operation name="measuringContent" qname="ns11:measuringContent" returnQName="ns11:measuringContentReturn" returnType="xsd:string" soapAction="" xmlns:ns11="http://pckRequirementsPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns11:sArchivo" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="measuringContent measuringStrings measurements"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlPortType" value="DocumentSRS"/>
+  <ns1:parameter name="className" value="pckRequirementsPhase.DocumentSRS"/>
+  <ns1:parameter name="wsdlServicePort" value="DocumentSRS"/>
+  <ns1:parameter name="schemaQualified" value="http://pckRequirementsPhase"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://pckRequirementsPhase"/>
+  <ns1:parameter name="wsdlServiceElement" value="DocumentSRSService"/>
+ </ns1:service>
+ <ns1:service name="OperationManual" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="measuringOperationManual" qname="ns12:measuringOperationManual" soapAction="" xmlns:ns12="http://pckClosingPhase"/>
+  <ns1:operation name="measuringStrings" qname="ns13:measuringStrings" soapAction="" xmlns:ns13="http://pckClosingPhase"/>
+  <ns1:operation name="measuringContent" qname="ns14:measuringContent" returnQName="ns14:measuringContentReturn" returnType="xsd:string" soapAction="" xmlns:ns14="http://pckClosingPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns14:sArchivo" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="measuringOperationManual measuringContent measuringStrings"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlPortType" value="OperationManual"/>
+  <ns1:parameter name="className" value="pckClosingPhase.OperationManual"/>
+  <ns1:parameter name="wsdlServicePort" value="OperationManual"/>
+  <ns1:parameter name="schemaQualified" value="http://pckClosingPhase"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://pckClosingPhase"/>
+  <ns1:parameter name="wsdlServiceElement" value="OperationManualService"/>
+ </ns1:service>
+ <ns1:service name="DesignDocumentProduct" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="measuringDocAnalysis" qname="ns15:measuringDocAnalysis" soapAction="" xmlns:ns15="http://pckAnalysisAndDesignPhase"/>
+  <ns1:parameter name="allowedMethods" value="measuringDocAnalysis"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlPortType" value="DesignDocumentProduct"/>
+  <ns1:parameter name="className" value="pckAnalysisAndDesignPhase.DesignDocumentProduct"/>
+  <ns1:parameter name="wsdlServicePort" value="DesignDocumentProduct"/>
+  <ns1:parameter name="schemaQualified" value="http://pckAnalysisAndDesignPhase"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://pckAnalysisAndDesignPhase"/>
+  <ns1:parameter name="wsdlServiceElement" value="DesignDocumentProductService"/>
+ </ns1:service>
+ <ns1:service name="UseCase" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="measurementsDesign" qname="ns16:measurementsDesign" soapAction="" xmlns:ns16="http://pckAnalysisAndDesignPhase"/>
+  <ns1:operation name="measuringRelAssociation" qname="ns17:measuringRelAssociation" returnQName="ns17:measuringRelAssociationReturn" returnType="xsd:int" soapAction="" xmlns:ns17="http://pckAnalysisAndDesignPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns17:sFileName6" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="measuringUseCase" qname="ns18:measuringUseCase" returnQName="ns18:measuringUseCaseReturn" returnType="xsd:double" soapAction="" xmlns:ns18="http://pckAnalysisAndDesignPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns18:sFileName2" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="measuringActor" qname="ns19:measuringActor" returnQName="ns19:measuringActorReturn" returnType="xsd:double" soapAction="" xmlns:ns19="http://pckAnalysisAndDesignPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns19:sFileName" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="measuringIncludes" qname="ns20:measuringIncludes" returnQName="ns20:measuringIncludesReturn" returnType="xsd:int" soapAction="" xmlns:ns20="http://pckAnalysisAndDesignPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns20:sFileName4" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="measuringAssociation" qname="ns21:measuringAssociation" returnQName="ns21:measuringAssociationReturn" returnType="xsd:double" soapAction="" xmlns:ns21="http://pckAnalysisAndDesignPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns21:sFileName3" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="measuringExtends" qname="ns22:measuringExtends" returnQName="ns22:measuringExtendsReturn" returnType="xsd:int" soapAction="" xmlns:ns22="http://pckAnalysisAndDesignPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns22:sFileName5" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="measuringAssociation measuringExtends measuringRelAssociation measuringUseCase measuringIncludes measurementsDesign measuringActor"/>
+  <ns1:parameter name="wsdlPortType" value="UseCase"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="schemaQualified" value="http://pckAnalysisAndDesignPhase"/>
+  <ns1:parameter name="wsdlServicePort" value="UseCase"/>
+  <ns1:parameter name="className" value="pckAnalysisAndDesignPhase.UseCase"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://pckAnalysisAndDesignPhase"/>
+  <ns1:parameter name="wsdlServiceElement" value="UseCaseService"/>
+ </ns1:service>
+ <ns1:service name="Requirements" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="measurementsRequirements" qname="ns23:measurementsRequirements" soapAction="" xmlns:ns23="http://pckRequirementsPhase"/>
+  <ns1:parameter name="allowedMethods" value="measurementsRequirements"/>
+  <ns1:parameter name="wsdlPortType" value="Requirements"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="schemaQualified" value="http://pckRequirementsPhase"/>
+  <ns1:parameter name="wsdlServicePort" value="Requirements"/>
+  <ns1:parameter name="className" value="pckRequirementsPhase.Requirements"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://pckRequirementsPhase"/>
+  <ns1:parameter name="wsdlServiceElement" value="RequirementsService"/>
+ </ns1:service>
+ <ns1:service name="MaintenanceManual" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="measuringMaintenanceManual" qname="ns24:measuringMaintenanceManual" soapAction="" xmlns:ns24="http://pckIntegrationAndTestingPhase"/>
+  <ns1:operation name="measuringStrings" qname="ns25:measuringStrings" soapAction="" xmlns:ns25="http://pckIntegrationAndTestingPhase"/>
+  <ns1:operation name="measuringMaintenance" qname="ns26:measuringMaintenance" returnQName="ns26:measuringMaintenanceReturn" returnType="xsd:string" soapAction="" xmlns:ns26="http://pckIntegrationAndTestingPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns26:sArchivo" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="measuringMaintenance measuringStrings measuringMaintenanceManual"/>
+  <ns1:parameter name="wsdlPortType" value="MaintenanceManual"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="schemaQualified" value="http://pckIntegrationAndTestingPhase"/>
+  <ns1:parameter name="wsdlServicePort" value="MaintenanceManual"/>
+  <ns1:parameter name="className" value="pckIntegrationAndTestingPhase.MaintenanceManual"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://pckIntegrationAndTestingPhase"/>
+  <ns1:parameter name="wsdlServiceElement" value="MaintenanceManualService"/>
+ </ns1:service>
+ <ns1:service name="MeasuringClass" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="measuringConstructionProduct" qname="ns27:measuringConstructionProduct" soapAction="" xmlns:ns27="http://pckConstructionPhase"/>
+  <ns1:operation name="metricCountMethods" qname="ns28:metricCountMethods" returnQName="ns28:metricCountMethodsReturn" returnType="xsd:double" soapAction="" xmlns:ns28="http://pckConstructionPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns28:sPackage" type="xsd:string"/>
+   <ns1:parameter qname="ns28:sClass" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="metricCountLines" qname="ns29:metricCountLines" returnQName="ns29:metricCountLinesReturn" returnType="xsd:double" soapAction="" xmlns:ns29="http://pckConstructionPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns29:sProject" type="xsd:string"/>
+   <ns1:parameter qname="ns29:sPackage" type="xsd:string"/>
+   <ns1:parameter qname="ns29:sClass" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="metricCountLines measuringConstructionProduct metricCountMethods"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlPortType" value="MeasuringClass"/>
+  <ns1:parameter name="className" value="pckConstructionPhase.MeasuringClass"/>
+  <ns1:parameter name="wsdlServicePort" value="MeasuringClass"/>
+  <ns1:parameter name="schemaQualified" value="http://pckConstructionPhase"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://pckConstructionPhase"/>
+  <ns1:parameter name="wsdlServiceElement" value="MeasuringClassService"/>
+ </ns1:service>
+ <ns1:service name="SequencDiagram" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="measurementsDesign" qname="ns30:measurementsDesign" soapAction="" xmlns:ns30="http://pckAnalysisAndDesignPhase"/>
+  <ns1:operation name="metNumLifeLine" qname="ns31:metNumLifeLine" returnQName="ns31:metNumLifeLineReturn" returnType="xsd:int" soapAction="" xmlns:ns31="http://pckAnalysisAndDesignPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns31:sFileName2" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="metNumActor" qname="ns32:metNumActor" returnQName="ns32:metNumActorReturn" returnType="xsd:int" soapAction="" xmlns:ns32="http://pckAnalysisAndDesignPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns32:sFileName" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="metNumMessage" qname="ns33:metNumMessage" returnQName="ns33:metNumMessageReturn" returnType="xsd:int" soapAction="" xmlns:ns33="http://pckAnalysisAndDesignPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns33:sFileName3" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="metNumLifeLine metNumMessage metNumActor measurementsDesign"/>
+  <ns1:parameter name="wsdlPortType" value="SequencDiagram"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="schemaQualified" value="http://pckAnalysisAndDesignPhase"/>
+  <ns1:parameter name="wsdlServicePort" value="SequencDiagram"/>
+  <ns1:parameter name="className" value="pckAnalysisAndDesignPhase.SequencDiagram"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://pckAnalysisAndDesignPhase"/>
+  <ns1:parameter name="wsdlServiceElement" value="SequencDiagramService"/>
+ </ns1:service>
+ <ns1:service name="Version" provider="java:RPC">
+  <ns1:parameter name="allowedMethods" value="getVersion"/>
+  <ns1:parameter name="className" value="org.apache.axis.Version"/>
+ </ns1:service>
+ <ns1:service name="ClassDiagram" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="measuringRelGeneralization" qname="ns34:measuringRelGeneralization" returnQName="ns34:measuringRelGeneralizationReturn" returnType="xsd:double" soapAction="" xmlns:ns34="http://pckAnalysisAndDesignPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns34:sNameFile5" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="measurementsDesign" qname="ns35:measurementsDesign" soapAction="" xmlns:ns35="http://pckAnalysisAndDesignPhase"/>
+  <ns1:operation name="measuringRelComposition" qname="ns36:measuringRelComposition" returnQName="ns36:measuringRelCompositionReturn" returnType="xsd:double" soapAction="" xmlns:ns36="http://pckAnalysisAndDesignPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns36:sNameFile6" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="measuringRelAssociation" qname="ns37:measuringRelAssociation" returnQName="ns37:measuringRelAssociationReturn" returnType="xsd:double" soapAction="" xmlns:ns37="http://pckAnalysisAndDesignPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns37:sNameFile4" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="measuringTotalPackage" qname="ns38:measuringTotalPackage" returnQName="ns38:measuringTotalPackageReturn" returnType="xsd:double" soapAction="" xmlns:ns38="http://pckAnalysisAndDesignPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns38:sNameFile7" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="measuringTotalClasses" qname="ns39:measuringTotalClasses" returnQName="ns39:measuringTotalClassesReturn" returnType="xsd:double" soapAction="" xmlns:ns39="http://pckAnalysisAndDesignPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns39:sNameFile8" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="measuringRelAggregation" qname="ns40:measuringRelAggregation" returnQName="ns40:measuringRelAggregationReturn" returnType="xsd:double" soapAction="" xmlns:ns40="http://pckAnalysisAndDesignPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns40:sNameFile2" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="measuringAbstractClass" qname="ns41:measuringAbstractClass" returnQName="ns41:measuringAbstractClassReturn" returnType="xsd:double" soapAction="" xmlns:ns41="http://pckAnalysisAndDesignPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns41:sFileName9" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="measuringAttributes" qname="ns42:measuringAttributes" returnQName="ns42:measuringAttributesReturn" returnType="xsd:double" soapAction="" xmlns:ns42="http://pckAnalysisAndDesignPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns42:sFileName10" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="measurinRelDependency" qname="ns43:measurinRelDependency" returnQName="ns43:measurinRelDependencyReturn" returnType="xsd:double" soapAction="" xmlns:ns43="http://pckAnalysisAndDesignPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns43:sNameFile3" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="measuringClass" qname="ns44:measuringClass" returnQName="ns44:measuringClassReturn" returnType="xsd:int" soapAction="" xmlns:ns44="http://pckAnalysisAndDesignPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns44:sNameFile" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="measuringMethods" qname="ns45:measuringMethods" returnQName="ns45:measuringMethodsReturn" returnType="xsd:double" soapAction="" xmlns:ns45="http://pckAnalysisAndDesignPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns45:sFileName11" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="measuringTotalClasses measuringMethods measuringRelAssociation measurinRelDependency measuringClass measuringRelGeneralization measuringRelComposition measuringAbstractClass measuringRelAggregation measurementsDesign measuringTotalPackage measuringAttributes"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlPortType" value="ClassDiagram"/>
+  <ns1:parameter name="className" value="pckAnalysisAndDesignPhase.ClassDiagram"/>
+  <ns1:parameter name="wsdlServicePort" value="ClassDiagram"/>
+  <ns1:parameter name="schemaQualified" value="http://pckAnalysisAndDesignPhase"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://pckAnalysisAndDesignPhase"/>
+  <ns1:parameter name="wsdlServiceElement" value="ClassDiagramService"/>
+ </ns1:service>
+ <ns1:service name="FacadeDMS" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="selectPhase" qname="ns46:selectPhase" returnQName="ns46:selectPhaseReturn" returnType="xsd:int" soapAction="" xmlns:ns46="http://pckFacadeDms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns46:iSelectPhase" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="selectPhase"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlPortType" value="FacadeDMS"/>
+  <ns1:parameter name="className" value="pckFacadeDms.FacadeDMS"/>
+  <ns1:parameter name="wsdlServicePort" value="FacadeDMS"/>
+  <ns1:parameter name="schemaQualified" value="http://pckFacadeDms"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://pckFacadeDms"/>
+  <ns1:parameter name="wsdlServiceElement" value="FacadeDMSService"/>
+ </ns1:service>
+ <ns1:service name="UserManual" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="measurements" qname="ns47:measurements" soapAction="" xmlns:ns47="http://pckRequirementsPhase"/>
+  <ns1:operation name="measuringStrings" qname="ns48:measuringStrings" soapAction="" xmlns:ns48="http://pckRequirementsPhase"/>
+  <ns1:operation name="measuringContent" qname="ns49:measuringContent" returnQName="ns49:measuringContentReturn" returnType="xsd:string" soapAction="" xmlns:ns49="http://pckRequirementsPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns49:sArchivo" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="measuringContent measuringStrings measurements"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlPortType" value="UserManual"/>
+  <ns1:parameter name="className" value="pckRequirementsPhase.UserManual"/>
+  <ns1:parameter name="wsdlServicePort" value="UserManual"/>
+  <ns1:parameter name="schemaQualified" value="http://pckRequirementsPhase"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://pckRequirementsPhase"/>
+  <ns1:parameter name="wsdlServiceElement" value="UserManualService"/>
+ </ns1:service>
+ <ns1:service name="Testing" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="metInsertRequirementsCovered" qname="ns50:metInsertRequirementsCovered" returnQName="ns50:metInsertRequirementsCoveredReturn" returnType="xsd:double" soapAction="" xmlns:ns50="http://pckIntegrationAndTestingPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns50:dRequerimientosCubiertos" type="xsd:double"/>
+   <ns1:parameter qname="ns50:dTotalRequerimientos" type="xsd:double"/>
+  </ns1:operation>
+  <ns1:operation name="metInsertValuesTestPassed" qname="ns51:metInsertValuesTestPassed" returnQName="ns51:metInsertValuesTestPassedReturn" returnType="xsd:double" soapAction="" xmlns:ns51="http://pckIntegrationAndTestingPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns51:dPruebasExitosas" type="xsd:double"/>
+   <ns1:parameter qname="ns51:dPruebasEjecutadas" type="xsd:double"/>
+  </ns1:operation>
+  <ns1:operation name="measuringTesting" qname="ns52:measuringTesting" soapAction="" xmlns:ns52="http://pckIntegrationAndTestingPhase"/>
+  <ns1:operation name="metInsertTestCovered" qname="ns53:metInsertTestCovered" returnQName="ns53:metInsertTestCoveredReturn" returnType="xsd:double" soapAction="" xmlns:ns53="http://pckIntegrationAndTestingPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns53:dPruebasRealizadas" type="xsd:double"/>
+   <ns1:parameter qname="ns53:dTotalPruebas" type="xsd:double"/>
+  </ns1:operation>
+  <ns1:operation name="metInsertTestFailed" qname="ns54:metInsertTestFailed" returnQName="ns54:metInsertTestFailedReturn" returnType="xsd:double" soapAction="" xmlns:ns54="http://pckIntegrationAndTestingPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns54:dPruebasFallidas" type="xsd:double"/>
+   <ns1:parameter qname="ns54:dPruebasEjecutadas" type="xsd:double"/>
+  </ns1:operation>
+  <ns1:operation name="metInsertTestLocked" qname="ns55:metInsertTestLocked" returnQName="ns55:metInsertTestLockedReturn" returnType="xsd:double" soapAction="" xmlns:ns55="http://pckIntegrationAndTestingPhase" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns55:dPruebasBloqueadas" type="xsd:double"/>
+   <ns1:parameter qname="ns55:dPruebasEjecutadas" type="xsd:double"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="metInsertTestLocked metInsertValuesTestPassed metInsertTestFailed metInsertTestCovered measuringTesting metInsertRequirementsCovered"/>
+  <ns1:parameter name="wsdlPortType" value="Testing"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="schemaQualified" value="http://pckIntegrationAndTestingPhase"/>
+  <ns1:parameter name="wsdlServicePort" value="Testing"/>
+  <ns1:parameter name="className" value="pckIntegrationAndTestingPhase.Testing"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://pckIntegrationAndTestingPhase"/>
+  <ns1:parameter name="wsdlServiceElement" value="TestingService"/>
+ </ns1:service>
+ <ns1:transport name="http">
+  <ns1:requestFlow>
+   <ns1:handler type="URLMapper"/>
+   <ns1:handler type="java:org.apache.axis.handlers.http.HTTPAuthHandler"/>
+  </ns1:requestFlow>
+  <ns1:parameter name="qs:list" value="org.apache.axis.transport.http.QSListHandler"/>
+  <ns1:parameter name="qs:wsdl" value="org.apache.axis.transport.http.QSWSDLHandler"/>
+  <ns1:parameter name="qs.list" value="org.apache.axis.transport.http.QSListHandler"/>
+  <ns1:parameter name="qs.method" value="org.apache.axis.transport.http.QSMethodHandler"/>
+  <ns1:parameter name="qs:method" value="org.apache.axis.transport.http.QSMethodHandler"/>
+  <ns1:parameter name="qs.wsdl" value="org.apache.axis.transport.http.QSWSDLHandler"/>
+ </ns1:transport>
+ <ns1:transport name="local">
+  <ns1:responseFlow>
+   <ns1:handler type="LocalResponder"/>
+  </ns1:responseFlow>
+ </ns1:transport>
+</ns1:deployment>

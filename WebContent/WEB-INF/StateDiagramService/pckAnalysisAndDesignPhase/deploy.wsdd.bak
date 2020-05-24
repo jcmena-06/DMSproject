@@ -1,0 +1,49 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from StateDiagramService WSDL service -->
+
+  <service name="StateDiagram" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://pckAnalysisAndDesignPhase"/>
+      <parameter name="wsdlServiceElement" value="StateDiagramService"/>
+      <parameter name="schemaQualified" value="http://pckAnalysisAndDesignPhase"/>
+      <parameter name="wsdlServicePort" value="StateDiagram"/>
+      <parameter name="className" value="pckAnalysisAndDesignPhase.StateDiagramSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="StateDiagram"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="measurementsDesign" qname="operNS:measurementsDesign" xmlns:operNS="http://pckAnalysisAndDesignPhase" soapAction="" >
+      </operation>
+      <operation name="measuringStates" qname="operNS:measuringStates" xmlns:operNS="http://pckAnalysisAndDesignPhase" returnQName="retNS:measuringStatesReturn" xmlns:retNS="http://pckAnalysisAndDesignPhase" returnType="rtns:double" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:sFileName" xmlns:pns="http://pckAnalysisAndDesignPhase" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="measuringInitial" qname="operNS:measuringInitial" xmlns:operNS="http://pckAnalysisAndDesignPhase" returnQName="retNS:measuringInitialReturn" xmlns:retNS="http://pckAnalysisAndDesignPhase" returnType="rtns:double" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:sFileName6" xmlns:pns="http://pckAnalysisAndDesignPhase" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="measuringChoice" qname="operNS:measuringChoice" xmlns:operNS="http://pckAnalysisAndDesignPhase" returnQName="retNS:measuringChoiceReturn" xmlns:retNS="http://pckAnalysisAndDesignPhase" returnType="rtns:double" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:sFilename5" xmlns:pns="http://pckAnalysisAndDesignPhase" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="measuringTotalState" qname="operNS:measuringTotalState" xmlns:operNS="http://pckAnalysisAndDesignPhase" returnQName="retNS:measuringTotalStateReturn" xmlns:retNS="http://pckAnalysisAndDesignPhase" returnType="rtns:double" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:sFileName2" xmlns:pns="http://pckAnalysisAndDesignPhase" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="measuringTotalTransition" qname="operNS:measuringTotalTransition" xmlns:operNS="http://pckAnalysisAndDesignPhase" returnQName="retNS:measuringTotalTransitionReturn" xmlns:retNS="http://pckAnalysisAndDesignPhase" returnType="rtns:double" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:sFilename3" xmlns:pns="http://pckAnalysisAndDesignPhase" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="measuringFinal" qname="operNS:measuringFinal" xmlns:operNS="http://pckAnalysisAndDesignPhase" returnQName="retNS:measuringFinalReturn" xmlns:retNS="http://pckAnalysisAndDesignPhase" returnType="rtns:double" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:sFileName7" xmlns:pns="http://pckAnalysisAndDesignPhase" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="measuringTotalJoins" qname="operNS:measuringTotalJoins" xmlns:operNS="http://pckAnalysisAndDesignPhase" returnQName="retNS:measuringTotalJoinsReturn" xmlns:retNS="http://pckAnalysisAndDesignPhase" returnType="rtns:double" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:sFileName4" xmlns:pns="http://pckAnalysisAndDesignPhase" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="measuringTotalState measuringFinal measuringTotalTransition measuringInitial measuringTotalJoins measurementsDesign measuringChoice measuringStates"/>
+
+  </service>
+</deployment>

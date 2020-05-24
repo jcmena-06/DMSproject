@@ -1,0 +1,33 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from UserManualService WSDL service -->
+
+  <service name="UserManual" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://pckRequirementsPhase"/>
+      <parameter name="wsdlServiceElement" value="UserManualService"/>
+      <parameter name="schemaQualified" value="http://pckRequirementsPhase"/>
+      <parameter name="wsdlServicePort" value="UserManual"/>
+      <parameter name="className" value="pckRequirementsPhase.UserManualSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="UserManual"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="measurements" qname="operNS:measurements" xmlns:operNS="http://pckRequirementsPhase" soapAction="" >
+      </operation>
+      <operation name="measuringStrings" qname="operNS:measuringStrings" xmlns:operNS="http://pckRequirementsPhase" soapAction="" >
+      </operation>
+      <operation name="measuringContent" qname="operNS:measuringContent" xmlns:operNS="http://pckRequirementsPhase" returnQName="retNS:measuringContentReturn" xmlns:retNS="http://pckRequirementsPhase" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:sArchivo" xmlns:pns="http://pckRequirementsPhase" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="measuringContent measuringStrings measurements"/>
+
+  </service>
+</deployment>
